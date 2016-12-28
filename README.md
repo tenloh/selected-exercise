@@ -10,6 +10,8 @@ $ createdb selected
 $ node seed.js
 ```
 
+Add the env folder on the root directory and add 'development.js' - please contact me if you did not receive it
+
 # Using the application
 
 To use the application, navigate to http://locahost:3456 and upload the CSV file with the Teacher Contact Data
