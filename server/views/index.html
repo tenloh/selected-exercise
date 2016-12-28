@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Selected CRM Application</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+</head>
+
+<body ng-app="SelectedApp" ng-controller="UploadCtrl">
+    <h3>Please upload your CSV file to get started</h3>
+
+    <div>
+        <button type="file" ngf-select="onFileSelect($file)" accept="*" ngf-max-height="1000" ngf-max-size="1MB">
+      Upload File</button>
+
+        <button ng-click="toggle()"> Refresh Teachers </button>
+    </div>
+
+    <table ng-show="tableToggle" border="1">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>E-mail</th>
+            <th>School Name</th>
+            <th>Contacted On</th>
+            <th>Bounce Type</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="teacher in teachers">
+            <td>{{teacher.firstName}}</td>
+            <td>{{teacher.lastName}}</td>
+            <td>{{teacher.email}}</td>
+            <td>{{teacher.schoolName}}</td>
+            <td>{{teacher.contactedOn}}</td>
+            <td>{{teacher.bounceType}}</td>
+            <td><button>Edit User (No Functionality)</button></td>
+        </tr>
+    </table>
+
+
+    <script src="/angular/angular.js" defer></script>
+    <script src="/angular-ui-bootstrap/dist/ui-bootstrap.js" defer></script>
+    <script src="/angular-animate/angular-animate.js" defer></script>
+    <script src="/ng-file-upload/dist/ng-file-upload.js" defer></script>
+    <script src="/angular-resource/angular-resource.js" defer></script>
+    <script src="/js/app.js" defer></script>
+    <script src="/js/upload/upload.js" defer></script>
+    <script src="/js/upload/upload_factory.js" defer></script>
+</body>
+
+</html>

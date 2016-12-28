@@ -1,0 +1,24 @@
+h3 {
+    text-align: center;
+    margin: auto;
+}
+
+div {
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 10px 0px
+}
+
+button {
+    display: inline-block;
+}
+
+table {
+    margin: auto;
+    display: block;
+}
+
+th,td{
+    width: 16%
+}
