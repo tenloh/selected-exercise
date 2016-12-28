@@ -18,7 +18,7 @@ module.exports = db.define('teacher', {
         type: Sequelize.STRING,
     },
     contactedOn: {
-        type: Sequelize.ARRAY(Sequelize.DATE)
+        type: Sequelize.DATE,
     },
     bounceType: {
         type: Sequelize.STRING,

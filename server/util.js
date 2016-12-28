@@ -32,7 +32,7 @@ function parseTeacherContactData(csvFile) {
             lastName: customer[1],
             email: customer[2],
             schoolName: customer[3],
-            // contactedOn: new Date(),
+            contactedOn: new Date(),
         }
 
         /* For Testing -- Only add 3 to DB*/
