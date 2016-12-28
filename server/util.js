@@ -35,12 +35,12 @@ function parseTeacherContactData(csvFile) {
             // contactedOn: new Date(),
         }
 
-        /* For Testing */
-        if (i === 1 || i === 2 || i === 3) {
+        /* For Testing -- Only add 3 to DB*/
+        // if (i === 1 || i === 2 || i === 3) {
             customerList.push(Teacher.findOrCreate({
                 where: customerObj
             }));
-        }
+        // }
     }
 
     return Promise.all(customerList)
@@ -76,7 +76,7 @@ function sendEmails(customerList) {
             }
         } else {
             messageObj.TemplateModel = {
-                firstName: 'School Head'
+                firstName: 'Teacher!'
             }
         }
 
@@ -97,14 +97,14 @@ function sendEmails(customerList) {
 
         if (customer.email) {
             messageObj.To = customer.email;
-            messageArray.push(promisifiedSendEmail(messageObj));
+            messageArray.push(promisifiedSendEmail(messageObj)); //Sending email promise
         }
 
 
     })
 
     //Send Email in one Batch
-    return Promise.all([messageArray[4]]);
+    return Promise.all([messageArray]);
 }
 
 /*

@@ -13,7 +13,6 @@ module.exports = db.define('teacher', {
     email: {
         type: Sequelize.STRING,
         isEmail: true,
-        unique: true,
     },
     schoolName: {
         type: Sequelize.STRING,

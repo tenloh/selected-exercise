@@ -10,7 +10,7 @@ db.sync({force: true})
     return Teacher.create({
         firstName: 'Bob',
         lastName: 'Dylan',
-        email: 'BobDylan@FakeBobDylans.com',
+        email: 'target@example.us',
         school: 'Bob Dylan\'s school of music'
     })
 })
