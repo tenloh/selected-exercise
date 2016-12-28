@@ -8,6 +8,7 @@ To run this program, please clone this library and follow the steps
 $ npm install
 $ createdb selected
 $ node seed.js
+$ npm start
 ```
 
 Add the env folder on the root directory and add 'development.js' - please contact me if you did not receive it
